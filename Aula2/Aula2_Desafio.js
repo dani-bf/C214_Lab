@@ -96,7 +96,7 @@ function displayMovies() {
     } else {
         console.log('Lista de filmes:');
         movies.forEach((movie, index) => {
-            const status = movie.watched ? 'Assistido' : 'Não assistido';
+            const status = movie.watched ? 'Assistido' : 'Não assistido.';
             const rating = movie.rating !== null ? `Avaliação: ${movie.rating}` : 'Ainda não avaliado';
             console.log(`${index + 1}. ${movie.name} (${status}) - ${rating}`);
         });
