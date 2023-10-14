@@ -1,25 +1,25 @@
-name: CI Class # Especificando o título do pipeline
+name: CI Class
 
 on:
-  push:
-    branches:
-      - main
+   push:
+     branches:
+        - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest # Pega uma máquina virtual ubuntu para executar a automatização dentro dela
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout do código # Clona o código para a máquina virtual
+    - name: Checkout do código
       uses: actions/checkout@v2
 
-    - name: Configurar Node.js # Instalando o gerenciador de dependências
+    - name: Configurar Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14' # Indica a versão do node a ser instalada
+        node-version: '14'
 
-    - name: Instalar dependências  
-      run: npm install # Instala as dependências necessárias
+    - name: Instalar dependências
+      run: npm install
 
     - name: Executar testes
-      run: npm test # Executa os testes
+      run: npm test
